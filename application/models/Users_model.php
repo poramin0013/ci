@@ -1,0 +1,14 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Users_model extends CI_Model {
+
+    private $table_name = 'users';
+
+    public function get_lists()
+    {
+            $query = $this->db->get($this->table_name);
+            return $query->result_array();
+    }
+
+}
